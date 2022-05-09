@@ -14,5 +14,5 @@ RUN apt-get update \
 	>>`ipython locate`/profile_default/ipython_config.py
 WORKDIR /simbricks
 COPY . /simbricks/labs
-CMD jupyter-lab --ip=0.0.0.0 --allow-root
+CMD jupyter-lab --ip=0.0.0.0 --allow-root --LabApp.token=''
 EXPOSE 8888/tcp
