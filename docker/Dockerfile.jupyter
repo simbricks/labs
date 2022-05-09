@@ -1,0 +1,18 @@
+FROM simbricks/simbricks-min:latest
+RUN apt-get update \
+ && apt-get install -y \
+	git \
+	graphviz \
+	python3-pip \
+ && rm -rf /var/lib/apt/lists/* \
+ && pip3 install \
+	graphviz \
+	jupyterlab \
+ && ipython profile create \ 
+ && echo "c.InteractiveShellApp.exec_lines = [ \
+	'import sys; sys.path.append(\"/simbricks/experiments\")' ]" \
+	>>`ipython locate`/profile_default/ipython_config.py
+WORKDIR /simbricks
+COPY . /simbricks/labs
+CMD jupyter-lab --ip=0.0.0.0 --allow-root
+EXPOSE 8888/tcp
