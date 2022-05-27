@@ -5,7 +5,7 @@ We provide a docker image ready to run the labs on docker hub as
 [`simbricks/labs`](https://hub.docker.com/repository/docker/simbricks/labs).
 To run the container run:
 ```
-docker run --rm -it -p8888:8888 --device=/dev/kvm simbricks/simbricks-jupyter
+docker run --rm -it -p8888:8888 --device=/dev/kvm simbricks/labs
 ```
 and then open
 [http://127.0.0.1:8888/lab/tree/labs/lab1.ipynb](http://127.0.0.1:8888/lab/tree/labs/lab1.ipynb)
