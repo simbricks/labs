@@ -1,0 +1,16 @@
+{
+	"image": "simbricks/labs",
+	"runArgs": [
+		"--device=/dev/kvm"
+	],
+	"remoteUser": "simbricks",
+	"workspaceMount": "source=${localWorkspaceFolder},target=/simbricks/labs,type=bind,consistency=cached",
+	"workspaceFolder": "/simbricks/labs",
+	"extensions": [
+		"ms-python.python",
+		"ms-python.vscode-pylance",
+		"ms-toolsai.jupyter",
+		"ms-toolsai.jupyter-keymap",
+		"ms-toolsai.jupyter-renderers"
+	]
+}
