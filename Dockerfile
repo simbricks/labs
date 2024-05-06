@@ -1,4 +1,4 @@
-FROM simbricks/simbricks-min:49294407d922
+FROM simbricks/simbricks-min@sha256:b2e09c99e9e7ad8bc5612a2bd421eac8295364cb4afb5ae06e4ca9473ae3fe1c
 RUN apt-get update \
  && apt-get install -y \
 	git \
