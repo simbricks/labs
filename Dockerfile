@@ -9,6 +9,8 @@ RUN apt-get update \
 	graphviz \
 	notebook \
 	jupyterlab
+ARG USERNAME=simbricks
+ARG USER_UID=1000
 ENV USER ${USERNAME}
 ENV NB_UID ${USER_UID}
 ENV HOME /home/${USERNAME}
