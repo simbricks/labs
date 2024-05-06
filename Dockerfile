@@ -7,6 +7,7 @@ RUN apt-get update \
  && rm -rf /var/lib/apt/lists/* \
  && pip3 install \
 	graphviz \
+	nbgitpuller \
 	notebook \
 	jupyterlab
 ARG USERNAME=simbricks
