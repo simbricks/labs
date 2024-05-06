@@ -1,4 +1,4 @@
-FROM simbricks/simbricks-min:latest
+FROM simbricks/simbricks-min:b2e09c99e9e7
 RUN apt-get update \
  && apt-get install -y \
 	git \
