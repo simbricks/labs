@@ -7,8 +7,13 @@ RUN apt-get update \
  && rm -rf /var/lib/apt/lists/* \
  && pip3 install \
 	graphviz \
+	notebook \
 	jupyterlab
-WORKDIR /simbricks
-COPY --chown=simbricks:simbricks . /simbricks/labs
+ENV USER ${USERNAME}
+ENV NB_UID ${USER_UID}
+ENV HOME /home/${USERNAME}
+COPY --chown=simbricks:simbricks . ${HOME}
+WORKDIR ${HOME}
+USER ${USERNAME}:${USERNAME}
 CMD jupyter-lab --ip=0.0.0.0 --allow-root --LabApp.token=''
 EXPOSE 8888/tcp
